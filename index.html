@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your HTML Page</title>
+    <style>
+      :root {
+        --modal-border-radius: 1rem;
+      }
+      /* This will remove the default white background of the modal container */
+      div.bimdata-modal-manager__content {
+        border-radius: var(--modal-border-radius);
+      }
+      div::selection {
+        background-color: transparent;
+        color: inherit;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .annotationText {
+        margin-top: 0.5rem;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        width: auto;
+        min-width: 5rem;
+        background: white;
+        border: 1px solid grey;
+        box-sizing: border-box;
+        animation: fadeIn 1s ease-out;
+      }
+    </style>
+</head>
+<body>
+
+  <div style="height: 100vh">
+    <div id="viewerId"></div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
